@@ -1,0 +1,31 @@
+{{ define "Create" }}
+  {{ template "Header" }}
+    {{ template "Menu" }} 
+   <h2>Create a Task</h2>  
+    <form method="POST" action="save">
+        <div class="row mb-3">
+            <label for="inputTask" class="col-sm-2 col-form-label">Task Name</label>
+            <div class="col-sm-10">
+                <input type="text" name="taskname" class="form-control" id="inputTask" placeholder="Task Name">
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label for="inputReceiver" class="col-sm-2 col-form-label">Receiver</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="inputReceiver" placeholder="Receiver" name="receiver">
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label for="inputDateline" class="col-sm-2 col-form-label">Date Line</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="inputDateline" placeholder="Date Line" name="dateline">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-10 offset-sm-2">
+                <button type="submit" class="btn btn-primary">Create</button>
+            </div>
+        </div>
+    </form>
+  {{ template "Footer" }}
+{{ end }}

@@ -10,7 +10,7 @@
             </div>
         </div>
         <div class="row mb-3">
-            <label for="inputReceiver" class="col-sm-2 col-form-label">Receiver</label>
+            <label for="inputReceiver" class="col-sm-2 col-form-label">Assignee</label>
             <div class="col-sm-10">
                 <input type="text" class="form-control" id="inputReceiver" placeholder="Receiver" name="receiver">
             </div>
@@ -18,9 +18,17 @@
         <div class="row mb-3">
             <label for="inputDateline" class="col-sm-2 col-form-label">Date Line</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" id="inputDateline" placeholder="Date Line" name="dateline">
+                <div class="input-group date" id="datepicker">
+                    <input type="text" class="form-control" name="dateline">
+                    <span class="input-group-append">
+                        <span class="input-group-text bg-white d-block">
+                            <i class="fa fa-calendar"></i>
+                        </span>
+                    </span>
+                </div>
             </div>
         </div>
+
         <div class="row">
             <div class="col-sm-10 offset-sm-2">
                 <button type="submit" class="btn btn-primary">Create</button>

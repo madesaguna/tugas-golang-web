@@ -32,7 +32,7 @@ var tmpl = template.Must(template.ParseGlob("views/*"))
 
 func Index(w http.ResponseWriter, r *http.Request) {
 	db := dbConn()
-	selDB, err := db.Query("SELECT id, taskname, receiver, dateline FROM task ORDER BY id DESC")
+	selDB, err := db.Query("SELECT id, taskname, receiver, dateline FROM task ORDER BY dateline DESC")
 	if err != nil {
 		panic(err.Error())
 	}
